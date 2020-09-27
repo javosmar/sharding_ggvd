@@ -51,6 +51,7 @@ sh.enableSharding("finanzas")
 sh.shardCollection("finanzas.facturas",{"cliente.region":1,condPago:1,_id:1})
 ```
 ![alt text](https://i.ibb.co/yPmnDXW/shard-Collection.png)
+![alt text](https://i.ibb.co/kcT3735/status-previo.png)
 ### Agregar 2 nuevos Shards al cluster.
 Añado los 2 shards restantes al mongos
 ```sh
@@ -70,6 +71,8 @@ for(var i = 0; i<3000; i++){load("facts3.js")}
 db.facturas.find({"cliente.region":"CABA","condPago":"30 Ds FF"}).explain()
 ```
 ![alt text](https://i.ibb.co/sg0fFr8/consultar2.png)
+![alt text](https://i.ibb.co/px3w6Dw/status-Shards.png)
+![alt text](https://i.ibb.co/b2wXVsJ/status-Databases.png)
 ### Definir dos consultas que obtengan cierta información de la BD e informar la salida del explain. Una debe poder obtener la información de un único shard y la otra debe tener que consultarlos a todos.
 ```sh
 db.facturas.find({"cliente.apellido":"Manoni"}).explain()
