@@ -1,7 +1,7 @@
 Autor: Ing. Martin Acosta - 2020
 
 # Ejercitación MongoDB - Sharding
-## Arquitectura de Datos - CEIoT - FIUBA
+## Gestión de Grandes Volúmenes de Datos - CEIoT - FIUBA
 Basados en la colección de facturas en la base de datos finanzas.
 ### Levantar todas las instancias necesarias para tener un cluster distribuido con un único Shard.
 Levanto el servidor de configuración
